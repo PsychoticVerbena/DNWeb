@@ -1,30 +1,36 @@
 export default function Commissions() {
  return (
-    <div>
+     <div className="section">
       <h1>Commissions</h1>
 
-      <h2>Prices</h2>
-      <ul>
-        <p>Sketch: $X</p>
-        <p>Lineart: $X</p>
-        <p>Full Color: $X</p>
-      </ul>
+      <p>Choose a type below and submit a request.</p>
 
-      <h2>Order Form</h2>
-      <p>Fill out the form below to request a commission.</p>
+      <div className="grid">
+        <div className="card">
+          <h2>Sketch</h2>
+          <p>$10 - $25</p>
+        </div>
 
-      <iframe
-        src="YOUR_GOOGLE_FORM_EMBED_LINK"
-        width="100%"
-        height="800"
-        frameBorder="0"
-        marginHeight="0"
-        marginWidth="0"
-      >
-        Loading…
-      </iframe>
+        <div className="card">
+          <h2>Full Render</h2>
+          <p>$40 - $80</p>
+        </div>
+
+        <div className="card">
+          <h2>Character Sheet</h2>
+          <p>$60+</p>
+        </div>
+      </div>
+
+      <div className="section">
+        <h2>Request Form</h2>
+        <iframe
+          src="YOUR_GOOGLE_FORM_LINK"
+          width="100%"
+          height="700"
+          style={{ border: "none", borderRadius: "12px" }}
+        />
+      </div>
     </div>
-
-    
   );
 }

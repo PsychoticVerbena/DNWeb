@@ -1,21 +1,24 @@
 export default function Gallery() {
 const images = [
     "/images/art1.jpg",
-    "/images/art2.PNG",
   ];
 
-  return (
-    <div>
+ return (
+    <div className="section">
       <h1>Gallery</h1>
 
-      <div style={{ display: "flex", gap: "10px", flexWrap: "wrap" }}>
+      <div className="grid">
         {images.map((img) => (
-          <img
-            key={img}
-            src={img}
-            alt=""
-            style={{ width: "200px", height: "auto" }}
-          />
+          <div className="card" key={img}>
+            <img
+              src={img}
+              style={{
+                width: "100%",
+                borderRadius: "8px",
+                display: "block"
+              }}
+            />
+          </div>
         ))}
       </div>
     </div>
